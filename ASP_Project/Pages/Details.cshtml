@@ -1,0 +1,69 @@
+﻿@page
+@model ASP_Project.Pages.DetailsModel
+
+
+<form class="form-group" method="post">
+   
+        <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Gender
+                </th>
+                 <th>
+                    Date Of Birth
+                </th>
+                 <th>
+                    Nationality
+                </th>
+                 <th>
+                    Programming skills
+                </th>
+                <th>
+                    Grade
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td width="25%">
+                        @Model.user.FirstName
+                    </td>
+                    <td width="25%">
+                        @Model.user.LastName
+                    </td>
+                    <td width="25%">
+                        @Model.user.Email
+                    </td>
+                    <td width="25%">
+                        @Model.user.Gender
+                    </td>
+                    <td width="25%">
+                        @Model.user.DateOfBirth
+                    </td>
+                     <td width="25%">
+                        @Model.user.Nationality
+                    </td>
+                    <td width="25%">
+                        @Model.user.ProgrammingSkills
+                    </td>
+                    <td width="25%">
+                        @Model.user.Grade
+                    </td>
+                </tr>
+           
+        </tbody>
+    </table>
+            
+</form>

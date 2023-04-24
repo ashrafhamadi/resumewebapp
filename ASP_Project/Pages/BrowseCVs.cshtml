@@ -1,0 +1,73 @@
+﻿@page
+@model ASP_Project.Pages.BrowseCVsModel
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Browse CVs</h2>
+        </div>
+        <div class="col-6">
+
+        </div>
+    </div>
+
+    <br /><br />
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Grade
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model.CVs)
+            {
+                <tr>
+                    <td>
+                        @obj.FirstName
+                    </td>
+                    <td>
+                        @obj.LastName
+                    </td>
+                    <td>
+                        @obj.Email
+                    </td>
+                    <td>
+                        @obj.Gender
+                    </td>
+                    <td>
+                        @obj.Grade
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                        <a asp-page="Details" asp-route-id="@obj.Id" class="btn btn-primary mx-2" style="background-color:black">
+                            Details
+                        </a>
+                        <a asp-page="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
+                            Edit
+                        </a>
+                        <a asp-page="Delete" asp-route-id="@obj.Id" class="btn btn-primary mx-2" style="background-color:red">
+                            Delete
+                        </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div> 

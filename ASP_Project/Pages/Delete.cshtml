@@ -1,0 +1,35 @@
+﻿@page
+@model ASP_Project.Pages.DeleteModel
+
+
+<form class="form-group" method="post">
+   
+    
+
+                  
+
+            <B><label asp-for="user.FirstName"></label></B>
+            <input name="FirstName" asp-for="user.FirstName" disabled type="text">
+            <br />
+
+    
+            <B><label asp-for="user.LastName"></label></B>
+            <input name="LastName" asp-for="user.LastName" disabled type="text" >        
+            <br />
+     
+
+     
+            <B><label asp-for="user.DateOfBirth"></label></B>        
+            <input name="DateOfBirth" asp-for="user.DateOfBirth" disabled type="date">        
+            <br />
+    
+
+    
+            
+            
+        
+        
+            <button style="background-color:red; color:white" type="submit" class="btn btn-outline-dark">Delete</button>
+         
+            
+</form>
